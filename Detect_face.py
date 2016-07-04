@@ -3,10 +3,12 @@ import sys
 import os
 
 if not "Extracted" in os.listdir("."):
-    os.mkdir("extracted")
+    os.mkdir("Extracted")
+    
 if len(sys.argv) < 2:
     print "Usage: python Detect_face.py 'image path'"
     sys.exit()
+    
 image_path=sys.argv[1]
 cascade="Face_cascade.xml"
 
