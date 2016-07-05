@@ -16,5 +16,7 @@ python Detect_face.py "Image path or just name if in same folder"
 ###Detected Faces
 ![](/extras/1.png?raw=True)
 ###The Extracted Images
-![](/extras/3.png?raw=True)
+![](/extras/3.png?raw=True)  
+  
+**Note**:If some faces are not detected try reducing the value of scalefactor in Detect_face.py on Line 20
 
