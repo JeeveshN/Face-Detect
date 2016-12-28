@@ -1,5 +1,7 @@
 # Face-Extractor  
-A Python tool that can extract Faces from Images.
+A Python tool that can extract Faces from Images.  
+
+I also built a similar tool capable of **[Facial recognition](https://github.com/JeeveshN/Facial-Recognition-Tool)**.
 
 ##Installations
 ```
