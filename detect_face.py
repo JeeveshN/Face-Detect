@@ -30,7 +30,7 @@ if __name__ == "__main__":
 		os.mkdir("Extracted")
     
 	if len(sys.argv) < 2:
-		print "Usage: python Detect_face.py 'image path'"
+		print("Usage: python Detect_face.py 'image path'")
 		sys.exit()
 
 	detect_faces(sys.argv[1])
