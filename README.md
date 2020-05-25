@@ -5,7 +5,9 @@ I also built a similar tool capable of **[Facial recognition](https://github.com
 
 ## Installations
 ```
-sudo apt-get install python-opencv
+virtualenv venv
+source venv/bin/activate
+pip install opencv-python
 ```
 ## Usage:
 ```
