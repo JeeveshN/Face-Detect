@@ -9,6 +9,8 @@ sudo apt-get install python-opencv
 ```
 ## Usage:
 ```
+git clone https://github.com/JeeveshN/Face-Detect.git
+cd Face-Detect
 python detect_face.py "Image path or just name if in same folder"
 ```
 ## Demo:
