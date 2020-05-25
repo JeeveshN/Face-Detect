@@ -9,7 +9,7 @@ sudo apt-get install python-opencv
 ```
 ## Usage:
 ```
-python Detect_face.py "Image path or just name if in same folder"
+python detect_face.py "Image path or just name if in same folder"
 ```
 ## Demo:
 
