@@ -41,6 +41,6 @@ if __name__ == "__main__":
 				print ("Processing.....",os.path.abspath(os.path.join(sys.argv[1],image)))
 				detect_faces(os.path.abspath(os.path.join(sys.argv[1],image)),False)
 			except Exception:
-				traceback.print_exc()
+				print ("Could not process ",os.path.abspath(os.path.join(sys.argv[1],image)))
 	else:
 		detect_faces(sys.argv[1])
