@@ -2,11 +2,12 @@ from random import randint
 import cv2
 import sys
 import os
+import traceback
       
 CASCADE="Face_cascade.xml"
 FACE_CASCADE=cv2.CascadeClassifier(CASCADE)
 
-def detect_faces(image_path):
+def detect_faces(image_path,display=True):
 
 	image=cv2.imread(image_path)
 	image_grey=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
@@ -20,9 +21,10 @@ def detect_faces(image_path):
 	    os.chdir("../")
 	    cv2.rectangle(image,(x,y),(x+w,y+h),(255, 255,0),2)
 
-	cv2.imshow("Faces Found",image)
-	if (cv2.waitKey(0) & 0xFF == ord('q')) or (cv2.waitKey(0) & 0xFF == ord('Q')):
-		cv2.destroyAllWindows()
+	if display:
+		cv2.imshow("Faces Found",image)
+		# if (cv2.waitKey(0) & 0xFF == ord('q')) or (cv2.waitKey(0) & 0xFF == ord('Q')):
+		# 	cv2.destroyAllWindows()
 
 if __name__ == "__main__":
 	
@@ -33,4 +35,12 @@ if __name__ == "__main__":
 		print("Usage: python Detect_face.py 'image path'")
 		sys.exit()
 
-	detect_faces(sys.argv[1])
+	if os.path.isdir(sys.argv[1]):
+		for image in os.listdir(sys.argv[1]):
+			try:
+				print ("Processing.....",os.path.abspath(os.path.join(sys.argv[1],image)))
+				detect_faces(os.path.abspath(os.path.join(sys.argv[1],image)),False)
+			except Exception:
+				traceback.print_exc()
+	else:
+		detect_faces(sys.argv[1])
